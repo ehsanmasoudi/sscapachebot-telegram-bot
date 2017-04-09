@@ -1,25 +1,4 @@
-<?php
-ob_start();
-define('API_KEY','XXXX');
-$the_admin_id = 0;
 
-file_put_contents("count",file_get_contents("count")+1);
-
-$ad_btn='آموزش های رایگان برنامه نویسی';
-$ad_url='http://telegram.me/cplearn';
-$ad_text = "1⃣ در تلگـ ـلیست، کانال خودتون رو به رایگان در مرجع کانالهای تلگرام فارسی قرار بدید، به رايگان تبليغ و عضوگيرى كنيد.
-<a href='http://www.teleglist.com/?bot'>به رایگان در تلگـ ـلیست کانال خود را ثبت کنید</a>
-➖➖➖➖➖➖
-ارایه انواع آموزش برنامه نویسی و طراحی وب...برای کسب اطالاعات بیشتر در کانال سایت عضو بشید.";
-
-function getUserLocation($uid,$default){
-    $cached = apc_fetch('location-'.$uid);
-    return $cached?$cached:$default;
-}
-
-function getUserStep($uid,$default){
-    $cached = apc_fetch('step-'.$uid);
-    return $cached?$cached:$default;
 }
 
 function setUserStep($uid,$step){
